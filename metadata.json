@@ -1,0 +1,6 @@
+{
+  "name": "Sunny Spark Voice",
+  "description": "A real-time live voice actor companion powered by Gemini that welcomes you aloud and responds to voice commands, character shifts, and expressive script coaching.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

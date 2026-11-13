@@ -1,0 +1,181 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-display: "Nunito Sans", "Quicksand", ui-sans-serif, system-ui, sans-serif;
+  --color-surface: #fdf7ff;
+  --color-surface-low: #f7f1ff;
+  --color-surface-container: #f2ebff;
+  --color-surface-high: #ece4ff;
+  --color-surface-highest: #e7dff9;
+  --color-on-surface: #1d192c;
+  --color-on-surface-variant: #484555;
+  --color-outline: #797587;
+  --color-outline-variant: #c9c4d8;
+  --color-primary: #532ddd;
+  --color-primary-container: #6c4df6;
+  --color-primary-fixed: #e5deff;
+  --color-secondary: #a7391e;
+  --color-secondary-container: #fd7958;
+  --color-secondary-fixed: #ffdad2;
+  --color-sprout: #2ec4b6;
+  --color-gold: #ffc845;
+}
+
+@layer base {
+  html,
+  body {
+    font-family: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+    background-color: #fdf7ff;
+    color: #1d192c;
+    -webkit-font-smoothing: antialiased;
+    overscroll-behavior: none;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: "Nunito Sans", "Quicksand", ui-sans-serif, system-ui, sans-serif;
+  }
+}
+
+.phonetic-display {
+  font-family: "Nunito Sans", "Quicksand", ui-sans-serif, sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+/* Tactile LinGua Push Buttons */
+.toy-btn-violet {
+  box-shadow: 0 6px 0 #5436d6;
+  transition: transform 140ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 140ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.toy-btn-violet:hover:not(:disabled) {
+  filter: brightness(1.04);
+}
+.toy-btn-violet:active:not(:disabled) {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #5436d6;
+}
+
+.toy-btn-teal {
+  box-shadow: 0 6px 0 #168f84;
+  transition: transform 140ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 140ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.toy-btn-teal:active:not(:disabled) {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #168f84;
+}
+
+.toy-btn-coral {
+  box-shadow: 0 6px 0 #de5836;
+  transition: transform 140ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 140ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.toy-btn-coral:active:not(:disabled) {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #de5836;
+}
+
+.toy-btn-gold {
+  box-shadow: 0 6px 0 #c9910c;
+  transition: transform 140ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 140ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.toy-btn-gold:active:not(:disabled) {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #c9910c;
+}
+
+.toy-btn-soft {
+  box-shadow: 0 4px 0 #c9c4d8;
+  transition: transform 140ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 140ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.toy-btn-soft:active:not(:disabled) {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #c9c4d8;
+}
+
+.lingua-card-shadow {
+  box-shadow: 0 12px 32px -8px rgba(108, 77, 246, 0.14);
+}
+
+/* Landing Hero Mascot & Floating Card Animations */
+@keyframes mascot-float {
+  0%, 100% { transform: translateY(4px) scale(0.99, 1.01); }
+  50% { transform: translateY(-10px) scale(1.01, 0.99); }
+}
+@keyframes mascot-wave {
+  0%, 100% { transform: rotate(-5deg); }
+  50% { transform: rotate(12deg); }
+}
+@keyframes mascot-blink {
+  0%, 94%, 98%, 100% { transform: scaleY(1); }
+  96% { transform: scaleY(0.1); }
+}
+@keyframes mascot-leaf-sway {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(4deg); }
+}
+@keyframes float-card-1 {
+  0%, 100% { transform: translateY(0px) rotate(-6deg); }
+  50% { transform: translateY(-10px) rotate(-3deg); }
+}
+@keyframes float-card-2 {
+  0%, 100% { transform: translateY(0px) rotate(5deg); }
+  50% { transform: translateY(-12px) rotate(8deg); }
+}
+@keyframes float-card-3 {
+  0%, 100% { transform: translateY(0px) rotate(-4deg); }
+  50% { transform: translateY(-9px) rotate(-1deg); }
+}
+@keyframes float-card-4 {
+  0%, 100% { transform: translateY(0px) rotate(4deg); }
+  50% { transform: translateY(-11px) rotate(6.5deg); }
+}
+@keyframes float-card-5 {
+  0%, 100% { transform: translateX(-50%) translateY(0px) rotate(-2deg); }
+  50% { transform: translateX(-50%) translateY(-10px) rotate(1.5deg); }
+}
+@keyframes particle-drift {
+  0%, 100% { transform: translateY(0px) translateX(0px); }
+  50% { transform: translateY(-8px) translateX(4px); }
+}
+@keyframes glow-pulse {
+  0%, 100% { transform: scale(1); opacity: 0.75; }
+  50% { transform: scale(1.08); opacity: 1; }
+}
+@keyframes spin-slow-kf {
+  100% { transform: rotate(360deg); }
+}
+
+.animate-mascot-float { animation: mascot-float 3.5s ease-in-out infinite; }
+.animate-mascot-wave { transform-origin: 172px 150px; animation: mascot-wave 2.2s ease-in-out infinite; }
+.animate-mascot-blink { transform-origin: 120px 137px; animation: mascot-blink 4.5s infinite; }
+.animate-mascot-leaves { transform-origin: 120px 74px; animation: mascot-leaf-sway 3s ease-in-out infinite; }
+.animate-float-card-1 { animation: float-card-1 4.2s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite; }
+.animate-float-card-2 { animation: float-card-2 4.8s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite 0.4s; }
+.animate-float-card-3 { animation: float-card-3 5.2s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite 0.8s; }
+.animate-float-card-4 { animation: float-card-4 4.5s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite 0.2s; }
+.animate-float-card-5 { animation: float-card-5 5.6s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite 1s; }
+.animate-particle-1 { animation: particle-drift 3.6s ease-in-out infinite; }
+.animate-particle-2 { animation: particle-drift 4.2s ease-in-out infinite 0.5s; }
+.animate-particle-3 { animation: particle-drift 4.8s ease-in-out infinite 1s; }
+.animate-particle-4 { animation: particle-drift 5.1s ease-in-out infinite 1.5s; }
+.animate-glow { animation: glow-pulse 6s ease-in-out infinite alternate; }
+.spin-slow { animation: spin-slow-kf 32s linear infinite; }
+
+.hero-stage-card {
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+  will-change: transform;
+}
+.hero-stage-card:hover {
+  animation-play-state: paused;
+  transform: scale(1.06) translateY(-4px) !important;
+  box-shadow: 0 20px 25px -5px rgba(108, 77, 246, 0.18), 0 8px 10px -6px rgba(108, 77, 246, 0.12) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
